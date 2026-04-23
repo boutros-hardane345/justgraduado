@@ -7,6 +7,7 @@
   <!-- Classical & elegant fonts + Friends-style font -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Permanent+Marker&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+  <link rel="icon" type="image/jpeg" href="photo.jpg">
   <style>
     * {
       margin: 0;
@@ -108,9 +109,9 @@
     .logo-item img {
       width: 100%;
       max-width: 100px;
-      height: auto;
-      filter: drop-shadow(0 0 4px rgba(212,175,55,0.3));
-      border-radius: 12px;
+      height: 100px;
+      filter: drop-shadow(0 0 4px rgba(241, 196, 48, 1));
+      border-radius: 50px;
     }
 
     .logo-item p {
@@ -124,7 +125,7 @@
     /* countdown card */
     .countdown-card {
       background: #1a1a1a;
-      border-radius: 28px;
+      border-radius: 30px;
       padding: 1.2rem;
       text-align: center;
       margin-bottom: 2rem;
@@ -361,7 +362,7 @@
 <div class="page">
   <div class="hero">
     <h1><span>Graduation Day</span></h1>
-    <div class="friends-style">SEASON:20 • EPISODE:26</div>
+    <div class="friends-style">SEASON : 20 - EPISODE : 26</div>
     <div class="friends-style-small">THE • ONE • WHERE • HE • GRADUATE</div>
   </div>
 
@@ -377,7 +378,7 @@
     <div class="info-card">
       <h2> Photoshoot in Ehmej</h2>
       <div class="info-line"><span class="emoji">📅</span> Thursday, 18 June 2026</div>
-      <div class="info-line"><span class="emoji">⏰</span> 10:00 AM – 12:00 PM</div>
+      <div class="info-line"><span class="emoji">⏰</span> 10:00 AM – 12:30 PM</div>
       <div class="info-line"><span class="emoji">🏡</span> Ehmej</div>
       <div class="info-line"><span class="emoji">👗</span> <span class="dresscode">Dress code: Smart casual</span> – elegant & comfortable</div>
     </div>
@@ -398,8 +399,8 @@
         </div>
       </div>
       <div id="rsvpMessage" class="success-message">✅ You've joined the group! See you on 18 June in Ehmej 🎓</div>
-      <div id="deadlineMessage" class="deadline-warning" style="display: none;">⛔ The RSVP deadline (10 June 2026) has passed. The group is now closed. We'll miss you – but you can still send me a personal message.</div>
-      <div class="deadline-note">⚠️ Deadline to join the group: <strong>10 June 2026</strong>. After that, the link will no longer work.</div>
+      <div id="deadlineMessage" class="deadline-warning" style="display: none;">⛔ The RSVP deadline (15 June 2026) has passed. The group is now closed. We'll miss you!</div>
+      <div class="deadline-note">Deadline to join the group: <strong>15 June 2026</strong>. <br>After that, the link will no longer work.</div>
     </div>
 
     <hr>
@@ -412,27 +413,25 @@
     <div class="logos-row">
       <div class="logo-item">
         <img src="kamesh.jpg" alt="Kammesh">
-        <p>Kammesh</p>
       </div>
       <div class="logo-item">
         <img src="collectorbar.jpg" alt="The Collector Bar">
-        <p>The Collector Bar</p>
       </div>
     </div>
   </div>
 
   <footer>
-    🎓 University Graduation • Ehmej • 18 June 2026 • 10:00–12:00
+    Photoshoot Graduation • Ehmej • 18 June 2026 • 10:00 – 12:30
   </footer>
 </div>
 
 <script>
   // ============================================================
   // 🔽 REPLACE THIS LINK WITH YOUR REAL WHATSAPP/TELEGRAM GROUP INVITE
-  const GROUP_LINK = "https://chat.whatsapp.com/yourinvitelink";
+  const GROUP_LINK = "https://chat.whatsapp.com/KzUVoeTAuCgCxOpV3a6MCr?mode=gi_t";
   // ============================================================
 
-  const RSVP_DEADLINE = new Date(2026, 5, 10, 23, 59, 59);
+  const RSVP_DEADLINE = new Date(2026, 5, 15, 23, 59, 59);
   const EVENT_DATE = new Date(2026, 5, 18, 10, 0, 0);
 
   function isAfterRSVPDeadline() {
@@ -478,7 +477,7 @@
 
     const btn = document.createElement('button');
     btn.className = 'btn-join';
-    btn.innerText = '✨ Join the group & RSVP ✨';
+    btn.innerText = 'Join the group & RSVP';
     btn.onclick = () => {
       if (confirm("You'll be taken to the group chat. Click OK to join and confirm your presence at the graduation photoshoot.")) {
         window.open(GROUP_LINK, '_blank');
